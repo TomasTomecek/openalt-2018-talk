@@ -76,17 +76,81 @@ class: center, middle
 
  * [Pro Git](https://git-scm.com/book/en/v2)
 
+--
+
+ * Let's proceed with an intro...
+
 ---
 
-# `git` — intro
+# `git` — intro (commit)
 
- * TODO: add examples
- * commit
- * HEAD
- * branch
- * remote
- * tracking
- * ref
+```
+commit 2f574d70446aa012659c03483daffd4e1a148ea5 (HEAD -> master)
+Author: Tomas Tomecek <ttomecek@redhat.com>
+Date:   Mon Apr 9 14:32:23 2018 +0200
+
+    update formatting
+    
+    Signed-off-by: Tomas Tomecek <ttomecek@redhat.com>
+
+diff --git a/index.html b/index.html
+index 7a9ead6..2771fd8 100644
+--- a/index.html
++++ b/index.html
+@@ -48,7 +48,7 @@ class: center, middle
+ 
+  * open source hacker, engineer, tech lead, speaker, teacher
+ 
+- * Contributing to `*`.
++ * contributing to `*`
+ 
+  * I am doing this talk for Tomas from 2010.
+ 
+```
+
+---
+
+# `git` — intro (branch)
+
+```
+ $ git branch --list --verbose --all
+ * master                2f574d7 [ahead 2] update formatting
+   remotes/origin/HEAD   -> origin/master
+   remotes/origin/master 6d31ed3 init
+```
+
+---
+
+# `git` — intro (remote)
+
+```
+$ git remote -v
+origin  git@github.com:TomasTomecek/conu.git (fetch)
+origin  git@github.com:TomasTomecek/conu.git (push)
+upstream        git@github.com:fedora-modularity/conu.git (fetch)
+upstream        git@github.com:fedora-modularity/conu.git (push)
+```
+
+---
+
+# `git` — intro (ref)
+
+```
+8eb6eb7bea4ff5ec5895bec361b5ae9420233e02 refs/heads/0.1.0-release
+311731859af584d8f9c3375d32afbc14a3d3f76c refs/heads/centos-support
+45986c3c3e547734f74d429eac54c43d3b117c70 refs/heads/fix-102
+b9b047987c1c6b0b7abfc8682e8f36043238eaea refs/heads/master
+9f84c2d5feeb07652225a4b7bc47a4e750653d9f refs/heads/pr/178
+64a5dea66cacff69a2963e45d24516a32b0a8ad3 refs/remotes/origin/HEAD
+45986c3c3e547734f74d429eac54c43d3b117c70 refs/remotes/origin/fix-102
+b9b047987c1c6b0b7abfc8682e8f36043238eaea refs/remotes/upstream/master
+dbebcf2124ffe27f004125b6a2d9d7b7ceb0bd1b refs/remotes/upstream/pr/104
+8079386cf23368d7530c2bd419d012dbf7dc25a8 refs/tags/0.1.0
+```
+
+???
+
+* was this useful?
 
 ---
 
@@ -94,15 +158,15 @@ class: center, middle
 
  * TODO: workshop!
  * ...figure out what's going on?
- * [...rebase my GitHub pull request?](https://github.com/user-cont/colin/pull/35#issuecomment-376538773)
  * ...ressurect my repository?
+ * [...rebase my GitHub pull request?](https://github.com/user-cont/colin/pull/35#issuecomment-376538773)
  * ...squash/split commits?
 
 ???
 
  * Prizes!
 
- 1. Prepare a cluster-fuck repository, ask what they see?
+ 1. Prepare a slightly borked repository, ask what they see.
  2. Use a real example.
  3. Use the borked repo, ask how to fix?
  4. Use the real example.
