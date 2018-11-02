@@ -1,6 +1,6 @@
 # How to be a good developer?
 
-[Slides](https://tomastomecek.github.io/open-house-2018-talk)
+[Slides](https://tomastomecek.github.io/openalt-2018-talk)
 
 ## Running locally
 
